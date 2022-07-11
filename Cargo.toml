@@ -1,0 +1,19 @@
+[package]
+name = "rfc-manager"
+version = "0.0.1" # https://crates.io/crates/rfc-manager
+edition = "2021"
+rust-version = "1.62"
+publish = true
+description = "Rust RFC manager"
+repository = "https://github.com/gyuho/rfc-manager"
+readme = "README.md"
+license = "Apache-2.0"
+
+[dependencies]
+chrono = { version = "0.4.19", optional = false }
+serde = { version = "1.0.139", features = ["derive"], optional = false }
+
+[dev-dependencies]
+env_logger = "0.9.0"
+log = "0.4.17"
+proptest = "1.0.0"
