@@ -1,5 +1,5 @@
 
-Rust random manager
+Rust RFC manager
 
 ![Crates.io](https://img.shields.io/crates/v/rfc-manager?logo=rust&style=for-the-badge)
 
