@@ -24,12 +24,10 @@ pub fn to_str(now_unix: u64) -> io::Result<String> {
 pub fn parse(s: &str) -> io::Result<DateTime<Utc>> {
     match DateTime::parse_from_rfc3339(s) {
         Ok(dt) => Ok(Utc.from_utc_datetime(&dt.naive_utc())),
-        Err(e) => {
-            return Err(Error::new(
-                ErrorKind::Other,
-                format!("failed to parse {} ({})", s, e),
-            ));
-        }
+        Err(e) => Err(Error::new(
+            ErrorKind::Other,
+            format!("failed to parse {} ({})", s, e),
+        )),
     }
 }
 
